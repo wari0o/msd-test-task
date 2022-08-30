@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: msd-test-deploy
+  labels:
+    app: msd-test-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: msd-test-app
+  template:
+    metadata:
+      labels:
+        app: msd-test-app
+    spec:
+      containers:
+      - name: msd-test-app
+        image: wari0o/msd-test-task:latest
+        ports:
+        - containerPort: 8080
+        resources:
+          requests:
+            memory: "64Mi"
+            cpu: "50m"
+          limits:
+            memory: "512Mi"
+            cpu: "500m"
