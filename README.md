@@ -17,14 +17,14 @@
 8. You can ask us any questions about the requirements and the expected solution.
 
 # How to run?
-Run command "kubectl apply -f .\kubernetes\" 
+Run command `kubectl apply -f .\kubernetes\` 
 
 Service will be available at port 80.
 
 # Service endpoints
-1. / - get current BTC to EUR and CZK rates;
-2. /history - request history;
-3. /docs - swagger.
+1. `/` - get current BTC to EUR and CZK rates;
+2. `/history` - request history;
+3. `/docs` - swagger.
 
 # Dockerhub link
 https://hub.docker.com/repository/docker/wari0o/msd-test-task
